@@ -5,7 +5,10 @@ from calculate import canIBuyBeer
 class TestBeer(unittest.TestCase):
     def test_always_passes(self):
         self.assertTrue(True, "This test always passes!")
-        
+    
+    def test_always_fails(self):
+        self.assertTrue(False, "This test always fails to verify pipeline!")
+
     def test_when_17_and_on_krogen_should_not_be_allowed(self):
         # ARRANGE
         age = 17
