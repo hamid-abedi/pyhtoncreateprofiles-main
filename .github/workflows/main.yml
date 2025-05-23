@@ -34,7 +34,6 @@ jobs:
       - name: Create JSON file
         run: |
           python -c "import csv, json; data = [{'name': f'{row[0]} {row[1]}', 'country': row[2], 'birthyear': row[3]} for row in csv.reader(open('profiles1.csv', 'r'))]; json.dump(data[1:], open('data.json', 'w'), indent=4)"
-
       # Köra enhetstester
       - name: Run unit tests
         run: |
