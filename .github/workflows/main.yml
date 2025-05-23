@@ -24,8 +24,17 @@ jobs:
 
         
       # lägg till create csv file (glöm inte pip install)
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+      - name: Run generate.py
+        run: python generate.py
       # lägg till Create JSON file
+      - name: Run csvtojson.py
+        run: python csvtojson.py
       # Köra enhetstester     
+      - name: Run unit tests
+        run: python -m unittest discover
       #python .\calculateTests.py 
       - name: Copy to dist
         run: |
